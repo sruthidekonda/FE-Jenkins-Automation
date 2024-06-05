@@ -1,0 +1,12 @@
+version: '3.8'
+ 
+services:
+  nginx:
+    image: nginx:latest
+    container_name: automation
+    ports:
+      - "8002:80"
+    volumes:
+      - /home/ubuntu/github-fe-code/FE-jenkins-automation:/usr/share/nginx/html 
+    restart: always
+
